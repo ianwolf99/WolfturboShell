@@ -3,7 +3,7 @@ Write-Output "*********************"
 Write-Output "@Ianwolf99"
 Write-Output "POWERSHELL OFFSYSTEM"
 Write-Output "**********************"
-Write-Output ""       
+Write-Output "https://github.com/ianwolf99/WolfturboShell.git"       
 
 
 $user = whoami
@@ -25,65 +25,65 @@ Write-Output "Getting details on $user......"
 whoami /all
 
 
-Write-Output ""
+Write-Output "___________________________________"
 Write-Output "-------------------------------"
-Write-Output ""
+Write-Output "___________________________________"
 Write-Output "LOCAL ADMIN INFORMATION"
 Write-Output "-----------------------"
-Write-Output ""
+Write-Output "___________________________________"
 
 net localgroup Administrators
 
 
 Write-Output ""
 Write-Output "-------------------------------"
-Write-Output ""
+Write-Output "_______________________________"
 Write-Output "LOCAL USERS INFORMATION"
 Write-Output "-----------------------"
-Write-Output ""
+Write-Output "______________________________"
 
 net users
 
-Write-Output ""
+Write-Output "___________________________________"
 Write-Output "-------------------------------"
-Write-Output ""
+Write-Output "___________________________________"
 Write-Output "CURRENT LOGGED IN USERS"
 Write-Output "-----------------------"
-Write-Output ""
+Write-Output "___________________________________"
 
 
 query user /server:$SERVER
 
 
-Write-Output ""
+Write-Output "___________________________________"
 Write-Output "-------------------------------"
-Write-Output ""
+Write-Output "___________________________________"
 Write-Output "PROGRAM INFORMATION"
 Write-Output "-------------------"
-Write-Output ""
+Write-Output "____________________________________"
 
-$progs = (dir "c:\program files").Name
-$progs32 = (dir "c:\Program Files (x86)").Name
-$allprogs = @($progs,$progs32)
+$programs = (dir "c:\program files").Name
+$programs32 = (dir "c:\Program Files (x86)").Name
+$allprogs = @($programs,$programs32)
 
 $allprogs
 
-Write-Output ""
+Write-Output "________________________________"
 Write-Output "-------------------------------"
-Write-Output ""
+Write-Output "________________________________"
 Write-Output "SMBSHARE INFORMATION"
 Write-Output "-------------------"
-Write-Output ""
+Write-Output "_________________________________"
 
  Get-SmbShare
 
 
-Write-Output ""
+Write-Output "_________________________________"
 Write-Output "-------------------------------"
-Write-Output ""
+Write-Output "_________________________________"
 Write-Output "INTERNET ACCESS TEST"
 Write-Output "-------------------"
-Write-Output ""
+Write-Output "__________________________________"
 
 
 $Publicip = (curl http://ipinfo.io/ip -UseBasicParsing).content
@@ -92,7 +92,7 @@ $internetcheckhackernews = (Test-NetConnection hackernews.com -Port 443).TcpTest
 $internetcheckMicro = (Test-NetConnection Microsoft.com -Port 443).TcpTestSucceeded
 
 Write-Output "Public IP: $Publicip"
-Write-Output ""
+Write-Output "_________________________________"
 Write-Output "Can I Reach Google: $internetcheckgoogle"
 Write-Output "Can I Reach Hacker news: $internetcheckhackernews"
 Write-Output "Can I Reach Microsoft: $internetcheckMicro"
@@ -165,12 +165,12 @@ Write-Output "_________________________"
 get-disk | fl
 
 #last option to persist
-#Write-OutPut""
+#Write-OutPut"_________________________________"
 #Write-OutPut "*********************"
 #Write-OutPut""
-#Write-OutPut"ShutDown machine and wait reboot "
+#Write-OutPut"ShutDown machine and wait reboot for malware to load. "
 #Write-OutPut"**********************"
-#Write-OutPut""
+#Write-OutPut"________________________________"
 
 #(Get-wmiobject -Class win32_OperatingSystem -ComputerName.).Win32Shutdown(2)
 
