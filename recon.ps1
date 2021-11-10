@@ -1,10 +1,9 @@
 Write-Output "______________________"
 Write-Output "*********************"
-Write-Output "@Ianwolf99"
-Write-Output "POWERSHELL OFFSYSTEM"
+Write-Host -ForegroundColor Green "@Ianwolf99"
+Write-Host -ForegroundColor Red "POWERSHELL OFFSYSTEM"
 Write-Output "**********************"
-Write-Output "https://github.com/ianwolf99/WolfturboShell.git"       
-
+Write-Host -ForegroundColor yellow "https://github.com/ianwolf99/WolfturboShell.git"       
 
 $user = whoami
 $currenthost = hostname 
