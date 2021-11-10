@@ -1,4 +1,4 @@
-﻿Write-Output "______________________"
+Write-Output "______________________"
 Write-Output "*********************"
 Write-Output "@Ianwolf99"
 Write-Output "POWERSHELL OFFSYSTEM"
@@ -310,3 +310,13 @@ Write-Output "**********************"
 Write-Output "_____________________________"
 
 Get-CimInstance Win32_StartupCommand | select Name, command, Location, User | fl;
+
+Write-Output "__________________________"
+Write-Output "*********************"
+Write-Output "______________________________"
+Write-Output "Software in Registry"
+Write-Output "**********************"
+Write-Output "_____________________________"
+
+Get-ChildItem -path Registry::HKEY_LOCAL_MACHINE\SOFTWARE | ft Name;
+
