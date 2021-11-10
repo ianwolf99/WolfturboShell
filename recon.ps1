@@ -309,4 +309,4 @@ Write-Output "startups"
 Write-Output "**********************"
 Write-Output "_____________________________"
 
-cmd /c wmic startup
+Get-CimInstance Win32_StartupCommand | select Name, command, Location, User | fl;
